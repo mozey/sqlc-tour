@@ -6,14 +6,15 @@ import (
 	"encoding/json"
 	"github.com/kyleconroy/sqlc-tour/pkg/dbconn"
 	"github.com/kyleconroy/sqlc-tour/pkg/logutil"
+	"github.com/kyleconroy/sqlc-tour/pkg/sqlc"
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 )
 
 func run(ctx context.Context, db *sql.DB) error {
-	q := &sqlc.Queries{db: db}
+	q := sqlc.New(db)
 
-	insertedAuthor, err := q.CreateAuthor(ctx, CreateAuthorParams{
+	insertedAuthor, err := q.CreateAuthor(ctx, sqlc.CreateAuthorParams{
 		Name: "Brian Kernighan",
 		Bio: sql.NullString{
 			String: "Co-author of The C Programming Language",
