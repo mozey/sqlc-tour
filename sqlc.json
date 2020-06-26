@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "packages": [{
+    "schema": "sqlc/schema",
+    "queries": "sqlc/queries",
+    "name": "sqlc",
+    "path": "pkg/sqlc"
+  }]
+} 
