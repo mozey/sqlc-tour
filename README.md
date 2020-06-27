@@ -32,7 +32,14 @@ Generate db code and run it
     go run *.go
     
     
+**TODO** [JSON Struct tags](https://github.com/kyleconroy/sqlc/blob/master/docs/json_tags.md) 
+ 
 **TODO** Bulk inserts
 [How does this work for bulk operations?](https://github.com/kyleconroy/sqlc/issues/216)
 [Efficient bulk imports via `pq.CopyIn`](https://github.com/kyleconroy/sqlc/issues/218)
+
+**TODO** Better null support with [guregu/null](https://github.com/guregu/null).
+Search and replace after generating the code?
+
+
 
